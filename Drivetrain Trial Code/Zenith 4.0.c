@@ -47,8 +47,8 @@ task main()
 
 	}
 	//								TANKDRIVE CODE
-	int leftSpeed = (vexRT[Ch2] + vexRT[Ch1]);
-	int rightSpeed = (vexRT[Ch2] - vexRT[Ch1]);
+	int leftSpeed = (vexRT[Ch2] + vexRT[Ch3]);
+	int rightSpeed = (vexRT[Ch2] - vexRT[Ch3]);
 	while(true){
 		motor[frontLeftSC]  =  leftSpeed;
 		motor[frontRightSC] = rightSpeed;
