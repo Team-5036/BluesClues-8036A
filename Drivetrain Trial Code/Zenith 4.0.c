@@ -11,7 +11,16 @@
 const int threshold = 5;
 const int upperthreshold = 100;
 #include "JoystickDriver.c"
-task autonomous(){
+/**Called once the robot is initialized*/
+task robotInit(){
+	
+}
+/**Called once the robot is disabled*/
+task disabledInit(){
+	
+}
+/** Called while the robot is in autonomous mode*/
+task autonomousPeriodic(){
 	int leftspeed;
 	intrightspeed;
 	leftSpeed = 129;
@@ -21,7 +30,8 @@ task autonomous(){
 		motor[backLeftSC] = leftSpeed;
 		motor[backRightSC] = rightSpeed;
 }
-task telopControl(){
+/**Called while the robot is in telop mode*/
+task teleopPeriodic(){
 	//								TANKDRIVE CODE
 	int leftSpeed = (vexRT[Ch3] + vexRT[Ch1]);
 	int rightSpeed = (vexRT[Ch3] - vexRT[Ch1]);
@@ -34,7 +44,8 @@ task telopControl(){
 	}
 	//								X-DRIVE CODE
 }
-task test()
+/**Called whiled the robot is in test mode*/
+task testPeriodic()
 {
 	while(true)	{
 		//						TEST DRIVE CODE
