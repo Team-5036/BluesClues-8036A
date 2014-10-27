@@ -11,7 +11,30 @@
 const int threshold = 5;
 const int upperthreshold = 100;
 #include "JoystickDriver.c"
-task main()
+task autonomous(){
+	int leftspeed;
+	intrightspeed;
+	leftSpeed = 129;
+	rightSpeed = 129;
+		motor[frontLeftSC]  =  leftSpeed;
+		motor[frontRightSC] = rightSpeed;
+		motor[backLeftSC] = leftSpeed;
+		motor[backRightSC] = rightSpeed;
+}
+task telopControl(){
+	//								TANKDRIVE CODE
+	int leftSpeed = (vexRT[Ch3] + vexRT[Ch1]);
+	int rightSpeed = (vexRT[Ch3] - vexRT[Ch1]);
+	while(true){
+		motor[frontLeftSC]  =  leftSpeed;
+		motor[frontRightSC] = rightSpeed;
+		motor[backLeftSC] = leftSpeed;
+		motor[backRightSC] = rightSpeed;
+
+	}
+	//								X-DRIVE CODE
+}
+task test()
 {
 	while(true)	{
 		//						TEST DRIVE CODE
@@ -46,15 +69,4 @@ task main()
 		}
 
 	}
-	//								TANKDRIVE CODE
-	int leftSpeed = (vexRT[Ch2] + vexRT[Ch3]);
-	int rightSpeed = (vexRT[Ch2] - vexRT[Ch3]);
-	while(true){
-		motor[frontLeftSC]  =  leftSpeed;
-		motor[frontRightSC] = rightSpeed;
-		motor[backLeftSC] = leftSpeed;
-		motor[backRightSC] = rightSpeed;
-
-	}
-	//								X-DRIVE CODE
 }
