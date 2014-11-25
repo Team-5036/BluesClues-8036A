@@ -149,7 +149,7 @@ task DriveTrain(){
 //																	MAIN
 task main(){
 	StartTask(DriveTrain);
-	StartTask(MotorSlewRate);
+//	StartTask(MotorSlewRate);
 	while( true ){
 		wait1Msec(100);
 	}
