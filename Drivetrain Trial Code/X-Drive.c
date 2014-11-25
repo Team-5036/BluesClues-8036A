@@ -43,12 +43,13 @@ Motor configuration
 
 /* =============================================================================*/
 //																DEFINING VARIABLES
+
 /*-----------------------------------------------------------------------------*/
 /*                                                                             */
 /*  definitionS and variables for the motor slew rate controller.              */
 /*                                                                             */
 /*-----------------------------------------------------------------------------*/
-
+/*
 #define MOTOR_NUM               kNumbOfTotalMotors
 #define MOTOR_MAX_VALUE         127
 #define MOTOR_MIN_VALUE         (-127)
@@ -72,7 +73,7 @@ int motorSlew[ MOTOR_NUM ];
 /*                       current speed and  increments or decrements to reduce */
 /*                       the difference as nesessary                           */
 /*-----------------------------------------------------------------------------*/
-
+/*
 task MotorSlewRate()
 {
     int motorIndex;
