@@ -73,7 +73,7 @@ void operatorControl() {
 		int forward = C1LY;
 		int strafe = C1LX;
 		int rotation = C1RX;
-		float rad = ((heading/10)*3.141592654)/180;
+		float rad = ((heading/10)*M_PI)/180;
 
 		strafe = forward * sin(rad) + strafe * cos(rad);
 		forward  = forward * cos(rad) - strafe * sin(rad);
