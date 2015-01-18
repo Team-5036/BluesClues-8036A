@@ -73,10 +73,10 @@ void operatorControl() {
 		int forward = C1LY;
 		int strafe = C1LX;
 		int rotation = C1RX;
-		float theta = ((heading/10)*3.141592654)/180;
+		float rad = ((heading/10)*3.141592654)/180;
 
-		strafe = forward * sin(theta) + strafe * cos(theta);
-		forward  = forward * cos(theta) - strafe * sin(theta);
+		strafe = forward * sin(rad) + strafe * cos(rad);
+		forward  = forward * cos(rad) - strafe * sin(rad);
 
 		//Set motor values
 		motorSet(frontLeft, -forward - strafe - rotation);
