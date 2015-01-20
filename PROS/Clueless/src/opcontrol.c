@@ -33,6 +33,7 @@
  */
 
 #include "main.h"
+extern Gyro gyro;
 
 int frontLeft = 2;
 int frontRight = 3;
@@ -73,7 +74,7 @@ void operatorControl() {
 		int forward = C1LY;
 		int strafe = C1LX;
 		int rotation = C1RX;
-		float rad = ((heading/10)*M_PI)/180;
+		float rad = ((heading)*M_PI)/180;
 
 		strafe = forward * sin(rad) + strafe * cos(rad);
 		forward  = forward * cos(rad) - strafe * sin(rad);
@@ -102,6 +103,7 @@ void operatorControl() {
 		bool BTN8D = joystickGetDigital(1,8,JOY_DOWN);
 		if (BTN8D ==1){
 			gyroReset(gyro);
+			delay(2000);
 		}
 		//ELEVATOR
 		if (BTN7U == 1){
