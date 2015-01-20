@@ -76,6 +76,7 @@ void operatorControl() {
 		int rotation = C1RX;
 		float rad = ((heading)*M_PI)/180;
 
+		// rotate coordinate system - gyro positive angle is CCW
 		strafe = forward * sin(rad) + strafe * cos(rad);
 		forward  = forward * cos(rad) - strafe * sin(rad);
 
