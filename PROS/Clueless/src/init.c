@@ -65,6 +65,6 @@ void initialize() {
     // ...
     // If gyro reads inaccurately, change "0" to desired sensitivity
     // See documentation on gyroInit for up‐to‐date sensitivity details
-    gyro = gyroInit(8, 0);
-    // ...
+    gyro = gyroInit(1, 0);
+    delay(2000);
 }
